@@ -1,0 +1,9 @@
+{
+  "version": "0.2.6",
+  "releaseLabel": "Beta 0.1",
+  "released": "2026-11-11",
+  "notes": {
+    "pl": "Możliwość podmiany osobnych plików graficznych i audio na GitHub Pages.",
+    "en": "Replaceable individual graphics and audio files on GitHub Pages."
+  }
+}
