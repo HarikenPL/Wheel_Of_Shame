@@ -1,0 +1,26 @@
+/* Start screen only. The artwork stays one intact layer.
+   Its lower, painted UI is outside the viewport; real controls follow below.
+   Coordinates refer to the supplied 999 × 1574 artwork. */
+.poster-menu{position:fixed;inset:0;z-index:1000;overflow:auto;overscroll-behavior:contain;display:flex;align-items:flex-start;justify-content:center;background:radial-gradient(ellipse at 50% 45%,#07313a 0%,#020b10 52%,#010608 85%)}
+.poster-menu:before,.poster-menu:after{display:none}
+.poster-menu[hidden]{display:none!important}
+.poster-page{width:100%;min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 0 max(18px,env(safe-area-inset-bottom));gap:0}
+.poster-art{position:relative;flex:none;width:min(100%,560px,calc((100svh - 180px)*.754));min-width:min(100%,280px);aspect-ratio:999/1325;overflow:hidden}
+.poster-art>img{display:block;width:100%;height:auto;max-width:none;pointer-events:none;user-select:none}
+.poster-start{position:absolute;left:8.5%;top:85%;width:83%;height:14%;padding:0;border:0;border-radius:14px;background:transparent;box-shadow:none;cursor:pointer;touch-action:manipulation;transition:background .15s,box-shadow .15s}
+.poster-menu .poster-start:hover:not(:disabled){background:#6ef9ff14;box-shadow:0 0 25px #2be9ef55,inset 0 0 22px #88faff26}
+.poster-menu .poster-start:active{background:#8efaff30;box-shadow:inset 0 0 30px #54faff44}
+.poster-start:focus-visible{outline:3px solid #c2ffff;outline-offset:3px;background:#63eefa18}
+.poster-controls{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:8px;padding:0 12px}
+.poster-language select,.poster-audio>button{min-height:44px;border:1px solid #67cbd2;background:linear-gradient(#0b2730,#031116);color:#e1f5f5;border-radius:12px;box-shadow:0 0 14px #24ced51c;font-size:13px;padding:10px 14px}
+.poster-language select{min-width:78px;font:18px Georgia,serif}
+.poster-language select option{background:#071923}
+.poster-audio>button[aria-pressed="true"]{border-color:#b7ffff;box-shadow:0 0 16px #39eceb44}
+.poster-audio .music-volume{display:none}
+.poster-admin{min-height:44px;margin-top:6px;padding:8px 16px;background:transparent;border:0;color:#b6c7c9;font:14px Georgia,serif}
+.poster-admin:before{content:'⚙';margin-right:9px;color:#bca77c}
+.poster-admin:hover{background:#1b414733;color:#fff}
+.poster-version{color:#77979e;font:11px system-ui;letter-spacing:.12em;line-height:20px}
+.poster-controls :focus-visible,.poster-admin:focus-visible{outline:2px solid #c2ffff;outline-offset:4px}
+@media(max-width:420px){.poster-page{padding-top:0}.poster-controls{gap:12px}.poster-audio>button{padding-inline:12px}}
+@media(prefers-reduced-motion:reduce){.poster-start{transition:none}}

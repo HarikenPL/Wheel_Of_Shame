@@ -1,0 +1,9 @@
+{
+  "version": "0.3.8",
+  "releaseLabel": "Beta 0.1",
+  "released": "2026-11-12",
+  "notes": {
+    "pl": "Lista postaci z miniaturami, osobiste ustawienia dźwięku, filtry administratora, przywracanie i czyszczenie archiwum oraz uniwersum ogólne.",
+    "en": "Character list with thumbnails, personal audio settings, admin filters, archive recovery and cleanup, and General Universe."
+  }
+}
